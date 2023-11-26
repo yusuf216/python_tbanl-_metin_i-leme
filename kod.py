@@ -17,23 +17,23 @@ while True:
     text = pytesseract.image_to_string(gray, lang='eng', config='--oem 3 --psm 6')
 
     # Eğer belirli metin algılanırsa "ENERJI" yazdır
-    if "ENERJI" in text:
-        print("enerji sözcüğü algılandı")
-        tts = gTTS('enerji', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
-        tts.save('enerji.mp3')
-        os.system("enerji.mp3")
+    if "kelime1" in text:
+        print("kelime1 sözcüğü algılandı")
+        tts = gTTS('kelime1', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
+        tts.save('kelime1.mp3')
+        os.system("kelime1.mp3")
 
-    elif "IKTIDAR" in text:
-        print("iktidar sözcüğü algılandı")
-        tts = gTTS('iktidar', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
-        tts.save('iktidar.mp3')
-        os.system("iktidar.mp3")
+    elif "kelime2" in text:
+        print("kelime2 sözcüğü algılandı")
+        tts = gTTS('kelime2', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
+        tts.save('kelime2.mp3')
+        os.system("kelime2.mp3")
 
-    elif "Piranha" in text:
-        print("piranha sözcüğü algılandı")
-        tts = gTTS('piranha', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
-        tts.save('piranha.mp3')
-        os.system("piranha.mp3")
+    elif "kelime3" in text:
+        print("kelime3 sözcüğü algılandı")
+        tts = gTTS('kelime3', lang='tr')  # Türkçe seslendirme için dil parametresi ekledik
+        tts.save('kelime3.mp3')
+        os.system("kelime3.mp3")
         
         
     cv2.putText(frame, text, (30, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
